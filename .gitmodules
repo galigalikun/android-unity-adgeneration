@@ -1,0 +1,3 @@
+[submodule "adgeneration"]
+	path = adgeneration
+	url = https://github.com/AdGeneration/sdk.git
