@@ -5,6 +5,11 @@ apply plugin: 'maven'
 group = 'jp.cgate.unity.adgeneration'
 version = '0.1.0'
 
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
 
 repositories {
     mavenCentral()
