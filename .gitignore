@@ -8,3 +8,4 @@ proguard.cfg
 .DS_Store
 *.sw[po]
 .svn
+.gradle

@@ -16,6 +16,7 @@ import android.util.Log;
 
 public class ADGNativeManager {
 
+    /*
     enum Horizontal {
         LEFT(1<<0),
         CENTER_HORIZONTAL(1<<1),
@@ -225,4 +226,5 @@ public class ADGNativeManager {
 		    }
         });
     }
+    */
 }
