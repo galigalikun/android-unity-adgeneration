@@ -56,7 +56,7 @@ public class ADGNativeManager {
     }
 
     private static final String TAG = ADGNativeManager.class.getSimpleName();
-	private FrameLayout layout = null;
+    private FrameLayout layout = null;
     private ADG adg;
 
     public ADGNativeManager() {
@@ -67,8 +67,8 @@ public class ADGNativeManager {
     }
 
     public void initADG(final String adid, final int adtype, final int horizontal, final int vertical, final String gameObject, final int width, final int height) {
-		final Activity a = UnityPlayer.currentActivity;
-		a.runOnUiThread(new Runnable() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(new Runnable() {
             @Override
             public void run() {
 
@@ -156,20 +156,20 @@ public class ADGNativeManager {
                             getGravity(horizontal, vertical));
         params.setMargins((int)left, (int)top, (int)right, (int)bottom);
 
-		final Activity a = UnityPlayer.currentActivity;
-		a.runOnUiThread(new Runnable() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 if(adg != null) {
-			        adg.setLayoutParams(params);
+                    adg.setLayoutParams(params);
                 }
             }
         });
     }
 
     public void resumeADG() {
-		final Activity a = UnityPlayer.currentActivity;
-		a.runOnUiThread(new Runnable() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 if(adg != null) {
@@ -179,8 +179,8 @@ public class ADGNativeManager {
         });
     }
     public void pauseADG() {
-		final Activity a = UnityPlayer.currentActivity;
-		a.runOnUiThread(new Runnable() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 if(adg != null) {
@@ -190,8 +190,8 @@ public class ADGNativeManager {
         });
     }
     public void showADG() {
-		final Activity a = UnityPlayer.currentActivity;
-		a.runOnUiThread(new Runnable() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 if(adg != null) {
@@ -201,8 +201,8 @@ public class ADGNativeManager {
         });
     }
     public void hideADG() {
-		final Activity a = UnityPlayer.currentActivity;
-		a.runOnUiThread(new Runnable() {
+        final Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 if(adg != null) {
@@ -212,17 +212,17 @@ public class ADGNativeManager {
         });
     }
     public void finishADG() {
-		Activity a = UnityPlayer.currentActivity;
-		a.runOnUiThread(new Runnable() {
+        Activity a = UnityPlayer.currentActivity;
+        a.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-			    if (adg != null) {
-				    layout.removeView(adg);
+                if (adg != null) {
+                    layout.removeView(adg);
                     adg.stop();
                     adg.setAdListener(null);
-				    adg = null;
-			    }
-		    }
+                    adg = null;
+                }
+            }
         });
     }
 }
