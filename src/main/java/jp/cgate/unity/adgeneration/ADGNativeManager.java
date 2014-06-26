@@ -79,6 +79,7 @@ public class ADGNativeManager {
                                 LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
                 }
 
+                Log.d(TAG, "ADG start");
                 adg = new ADG(a);
                 adg.setLocationId(adid);
                 if(Size.SP_320x50.is(adtype)) {
@@ -94,6 +95,7 @@ public class ADGNativeManager {
                 } else {
                     throw new IllegalArgumentException("adtype error");
                 }
+                Log.d(TAG, "ADG setAdListener");
                 adg.setAdListener(new ADGListener() {
                     @Override
                     public void onReceiveAd() {
@@ -123,6 +125,7 @@ public class ADGNativeManager {
                 layout.addView(adg, new FrameLayout.LayoutParams(
                             LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT,
                             getGravity(horizontal, vertical)));
+                Log.d(TAG, "ADG end");
             }
         });
     }

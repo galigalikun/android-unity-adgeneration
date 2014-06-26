@@ -3,7 +3,7 @@ apply plugin: 'maven'
 
 
 group = 'jp.cgate.unity.adgeneration'
-version = '0.1.0'
+version = '0.1.1'
 
 allprojects {
     repositories {
@@ -17,6 +17,6 @@ repositories {
 
 dependencies {
     compile 'com.google.android:android:4.+'
-    compile files('/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/release/bin/classes.jar', 'adgeneration/ADG_AndroidSDK/ADG-1.4.0.jar')
+    compile files('/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/bin/classes.jar', 'adgeneration/ADG_AndroidSDK/ADG-1.4.0.jar')
 }
 
